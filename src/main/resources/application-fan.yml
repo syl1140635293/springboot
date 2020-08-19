@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.21.143:3306/exam?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+server:
+  port: 8881
+mybatis:
+  mapper-locations: classpath:mybatis-mapper/*.xml
+  type-aliases-package: com.haitun.haituntools.model
+redis:
+  host: 127.0.0.1
+  port: 6379
+  database: 0
+  pool:
+    max-idle: 8
+    min-idle: 0
+    max-active: 8
+    max-wait: -1
+logging:
+  file:
+  path:
+  config: classpath:logback-boot.xml
+  level:
+    org.springframework.web: DEBUG
+    com.haitun : debug

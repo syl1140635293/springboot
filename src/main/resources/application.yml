@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: sun
+    #active: fan
